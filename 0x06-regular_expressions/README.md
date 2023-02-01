@@ -1,1 +1,1 @@
-0x06. Regular expression Task
+0x06. Regular expression Tasks
