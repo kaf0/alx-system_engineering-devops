@@ -33,18 +33,18 @@ defaults
 	errorfile 503 /etc/haproxy/errors/503.http
 	errorfile 504 /etc/haproxy/errors/504.http
 
-frontend  ehoneah-frontend-http
+frontend kafmart-frontend-http
         bind *:80
         mode http
 	http-request set-header X-Forwarded-Proto http
-        default_backend ehoneah-backend
+        default_backend kafmart-backend
 
-frontend ehoneah-frontend-https
-	bind *:443 ssl crt /etc/haproxy/certs/www.ehoneah.tech.pem
+frontend kafmart-frontend-https
+	bind *:443 ssl crt /etc/haproxy/certs/www.kafmart.tech.pem
 	http-request set-header X-Forwarded-Proto https
-	default_backend ehoneah-backend
+	default_backend kafmart-backend
 
-backend ehoneah-backend
+backend kafmart-backend
         balance roundrobin
-        server 63210-web-01 100.25.19.204:80 check
-        server 63210-web-02 54.157.159.85:80 check
+        server 105196-web-01 18.209.178.43:80 check
+        server 105196-web-02 54.144.150.198:80 check
