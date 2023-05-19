@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 [Unit]
 Description=gunicorn daemon
 After=network.target
